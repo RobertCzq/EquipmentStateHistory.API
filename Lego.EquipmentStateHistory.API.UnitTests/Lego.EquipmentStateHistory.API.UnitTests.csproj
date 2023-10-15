@@ -24,10 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Systems\Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Lego.EquipmentStateHistory.API\Lego.EquipmentStateHistory.API.csproj" />
   </ItemGroup>
 

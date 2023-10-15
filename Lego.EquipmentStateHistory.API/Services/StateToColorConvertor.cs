@@ -6,8 +6,7 @@ namespace Lego.EquipmentStateHistory.API.Services
     {
         public string ConvertStateToColor(State state)
         {
-            var color = string.Empty;
-
+            string? color;
             switch (state)
             {
                 case State.Starting:
@@ -19,6 +18,9 @@ namespace Lego.EquipmentStateHistory.API.Services
                     break;
                 case State.Producing:
                     color = "Green";
+                    break;
+                default:
+                    color = "Unknown";
                     break;
             }
 
