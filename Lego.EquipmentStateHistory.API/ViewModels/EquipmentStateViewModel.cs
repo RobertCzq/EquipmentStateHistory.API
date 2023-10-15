@@ -1,6 +1,6 @@
 ﻿namespace Lego.EquipmentStateHistory.API.ViewModels
 {
-    public class EuipmentStateViewModel
+    public class EquipmentStateViewModel
     {
         public long EquipmentId { get; set; }
         public DateTime DateModified { get; set; }

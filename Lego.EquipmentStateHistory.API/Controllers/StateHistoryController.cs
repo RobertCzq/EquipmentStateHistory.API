@@ -30,7 +30,7 @@ namespace Lego.EquipmentStateHistory.API.Controllers
                 return NotFound();
             }
 
-            var currentStateViewModel = new EuipmentStateViewModel()
+            var currentStateViewModel = new EquipmentStateViewModel()
             {
                 EquipmentId = curentState.EquipmentId,
                 DateModified = curentState.DateModified,
@@ -51,12 +51,12 @@ namespace Lego.EquipmentStateHistory.API.Controllers
             }
 
             var statesViewModels = states.Select(st =>
-                new EuipmentStateViewModel()
+                new EquipmentStateViewModel()
                 {
                     EquipmentId = st.EquipmentId,
                     DateModified = st.DateModified,
                     Color = _stateToColorConvertor.ConvertStateToColor(st.State)
-                });
+                }).ToList();
 
             return Ok(statesViewModels);
         }
