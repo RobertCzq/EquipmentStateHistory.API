@@ -25,6 +25,7 @@ namespace Lego.EquipmentStateHistory.API
             builder.Services.AddSingleton<IDataContext, DataContext>();
             builder.Services.AddScoped<IStateHistoryRepository, StateHistoryRepository>();
             builder.Services.AddScoped<IStateToColorConvertor, StateToColorConvertor>();
+            builder.Services.AddScoped<IOrdersRepository, OrdersRepository>();
 
             var app = builder.Build();
 
